@@ -8,7 +8,7 @@ using System.Data;
 
 namespace sistema_gestao_estudantes
 {
-    // A classe do nosso banco de dados.
+    // A classe do nosso banco de dados .
     internal class MEU_BD
     {
         // O "objeto" que representa a nossa conexão com o banco de dados.
