@@ -40,6 +40,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(775, 350);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // button1
             // 
@@ -51,6 +52,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Atualizar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ButtonAtualizar);
             // 
             // FormListaDeEstudantes
             // 

@@ -8,11 +8,11 @@ using System.Data;
 
 namespace sistema_gestao_estudantes
 {
-    // A classe do nosso banco de dados .
+    // A classe do nosso banco de dados.
     internal class MEU_BD
     {
         // O "objeto" que representa a nossa conexão com o banco de dados.
-        private MySqlConnection conexao = new MySqlConnection("datasource=localhost;username=root;password=;database=t4_sga_bd");
+        private MySqlConnection conexao = new MySqlConnection("datasource=localhost; username=root; password=;database=sga_estudantes_bd_t4");
         
         // Controla o acesso a variável "conexao".
         public MySqlConnection getConexao
