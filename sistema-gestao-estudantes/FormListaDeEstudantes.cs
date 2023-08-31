@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,31 @@ namespace sistema_gestao_estudantes
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
+            AtualizarDeletarEstudantes atualizarDeletarEstudantes = new AtualizarDeletarEstudantes();
+            atualizarDeletarEstudantes.textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            atualizarDeletarEstudantes.txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            atualizarDeletarEstudantes.txtSobrenome.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            atualizarDeletarEstudantes.datetime.Value = (DateTime) dataGridView1.CurrentRow.Cells[3].Value;
 
+            if (dataGridView1.CurrentRow.Cells[4].Value.ToString() == "Masculino")
+            {
+                atualizarDeletarEstudantes.radioButtonFeminno.Checked = true;
+            }
+            else
+            {
+                atualizarDeletarEstudantes.radioButtonMasculino.Checked = true;
+            }
+
+            atualizarDeletarEstudantes.textTelefone.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            atualizarDeletarEstudantes.textEndereco.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+
+            //foto
+            byte[] fotoDaLista;
+            fotoDaLista = (byte[])dataGridView1.CurrentRow.Cells[7].Value;
+            MemoryStream fotoDoEstudante = new MemoryStream(fotoDaLista);
+            atualizarDeletarEstudantes.pictureBoxFoto.Image = Image.FromStream(fotoDoEstudante);
+            atualizarDeletarEstudantes.Show();
         }
 
         private void ButtonAtualizar(object sender, EventArgs e)
