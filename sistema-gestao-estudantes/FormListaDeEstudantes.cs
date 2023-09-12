@@ -40,7 +40,7 @@ namespace sistema_gestao_estudantes
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             AtualizarDeletarEstudantes atualizarDeletarEstudantes = new AtualizarDeletarEstudantes();
-            atualizarDeletarEstudantes.textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            atualizarDeletarEstudantes.textBoxID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             atualizarDeletarEstudantes.txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             atualizarDeletarEstudantes.txtSobrenome.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             atualizarDeletarEstudantes.datetime.Value = (DateTime) dataGridView1.CurrentRow.Cells[3].Value;

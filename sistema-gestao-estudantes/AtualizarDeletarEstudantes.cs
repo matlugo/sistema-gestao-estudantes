@@ -14,7 +14,7 @@ namespace sistema_gestao_estudantes
     public partial class AtualizarDeletarEstudantes : Form
     {
         //internal object textendereco;
-
+        Estudante estudante = new Estudante();
         public AtualizarDeletarEstudantes()
         {
             InitializeComponent();
@@ -64,8 +64,8 @@ namespace sistema_gestao_estudantes
 
         private void btnconfirmar(object sender, EventArgs e)
         {
-            Estudante estudante = new Estudante();
-            int id = Convert.ToInt32(textBox1.Text);
+          //  Estudante estudante = new Estudante();
+            int id = Convert.ToInt32(textBoxID.Text);
             string nome = txtNome.Text;
             string sobrenome = txtSobrenome.Text;
             DateTime nascimento = datetime.Value;
@@ -114,6 +114,16 @@ namespace sistema_gestao_estudantes
                 MessageBox.Show("Campos não preenchidos",
                     "Inserir Estudante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void textboxID_text(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBoxID.Text);
         }
     }
 }

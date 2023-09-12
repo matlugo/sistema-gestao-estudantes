@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.btnprocurar = new System.Windows.Forms.Button();
             this.Nome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,12 +54,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxID.Location = new System.Drawing.Point(141, 42);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(155, 20);
+            this.textBoxID.TabIndex = 0;
+            this.textBoxID.TextChanged += new System.EventHandler(this.textboxID_text);
             // 
             // btnprocurar
             // 
@@ -235,6 +236,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Remover";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // textTelefone
             // 
@@ -276,7 +278,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.Nome);
             this.Controls.Add(this.btnprocurar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxID);
             this.Name = "AtualizarDeletarEstudantes";
             this.Text = "AtualizarDeletarEstudantes";
             this.groupBox1.ResumeLayout(false);
@@ -301,7 +303,7 @@
         private System.Windows.Forms.Button button4;
         internal System.Windows.Forms.TextBox textTelefone;
         private System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox textBoxID;
         internal System.Windows.Forms.TextBox txtNome;
         internal System.Windows.Forms.TextBox txtSobrenome;
         internal System.Windows.Forms.DateTimePicker datetime;
